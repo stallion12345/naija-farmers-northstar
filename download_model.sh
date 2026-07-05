@@ -3,13 +3,13 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODEL_DIR="$HERE/model"
 MODEL_FILE="$MODEL_DIR/Phi-3-mini-4k-instruct-q4.gguf"
-MODEL_URL="https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf/resolve/main/Phi-3-mini-4k-instruct-q4.gguf"
+MODEL_URL="https://huggingface.co/stallion12345/naija-farmers-northstar/resolve/main/Phi-3-mini-4k-instruct-q4.gguf"
 mkdir -p "$MODEL_DIR"
 if [[ -f "$MODEL_FILE" ]]; then
   echo "model already present at $MODEL_FILE — skipping download"
   exit 0
 fi
-echo "downloading $MODEL_URL → $MODEL_FILE (~2.2 GB)…"
+echo "downloading $MODEL_URL → $MODEL_FILE (~2.3 GB)…"
 if command -v curl > /dev/null 2>&1; then
   curl -L --fail --progress-bar -o "$MODEL_FILE.partial" "$MODEL_URL"
 elif command -v wget > /dev/null 2>&1; then
