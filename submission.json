@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "profiler_version": "adtc-profiler 0.1.0",
+  "submission": {
+    "team_id": "your-team-id",
+    "domain": "agriculture",
+    "language_scope": [
+      "en"
+    ],
+    "african_alpha_claim": true,
+    "budget_laptop_claim": true,
+    "submitter": {
+      "name": "Chukwuemeka Chukwuma",
+      "email": "emekachukwuma31@gmail.com",
+      "github_handle": "stallion12345"
+    },
+    "cross_disciplinary_pairing": {
+      "discipline": "agronomy",
+      "load_bearing": true,
+      "description": "Offline RAG-powered groundnut advisory for Nigerian smallholder farmers using ICRISAT and IAR Zaria extension documents. Runs entirely on CPU with no cloud dependency."
+    },
+    "test_prompts": [
+      {
+        "prompt_id": "tp_001",
+        "prompt": "What is the recommended NPK fertilizer rate per hectare for groundnut cultivation in Nigeria?"
+      },
+      {
+        "prompt_id": "tp_002",
+        "prompt": "My groundnut leaves are yellowing and plants look stunted in Kaduna. What disease is this and how do I control it?"
+      }
+    ],
+    "model": {
+      "name": "Phi-3-mini-4k-instruct-Q4_K_M",
+      "runtime": "llama.cpp",
+      "quantization": "GGUF Q4_K_M",
+      "parameters_estimate": "3.82B",
+      "packaging": "binary_bundle"
+    }
+  },
+  "environment": {
+    "measured_on": "participant_laptop",
+    "cpu_model": "Intel(R) Core(TM) i5-4300M CPU @ 2.60GHz",
+    "ram_gb": 7.9,
+    "gpu": "none",
+    "os": "Ubuntu 22.04.5 LTS"
+  },
+  "throughput": {
+    "tokens_per_second_generation": 3.75,
+    "first_token_latency_ms": 70284.7,
+    "prompt_tokens": 512,
+    "generated_tokens": 128
+  },
+  "memory": {
+    "peak_rss_mb": 3778.41,
+    "steady_state_rss_mb": 3586.71,
+    "peak_vms_mb": 4060.64
+  },
+  "accuracy": [],
+  "cpu_thermal": {
+    "cpu_percent_p99": 100.0,
+    "core_temp_c_peak": null,
+    "throttled": false
+  },
+  "reproducibility": {
+    "git_commit_sha": "1a226db4f91a",
+    "docker_image_digest": "unknown",
+    "random_seed": 42
+  },
+  "model_info": {
+    "params_count": null,
+    "context_length": 4096,
+    "architecture": "phi3",
+    "claimed_params_estimate": "3.82B",
+    "params_match": true
+  }
+}
